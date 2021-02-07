@@ -248,7 +248,7 @@ def user_logout(request):
     # Take the user back to the homepage.
     return redirect(reverse('rango:index'))
 
-def  get_server_side_cookie(request, cookie, default_val=None):
+def get_server_side_cookie(request, cookie, default_val=None):
     val = request.session.get(cookie)
     if not val:
         val = default_val
